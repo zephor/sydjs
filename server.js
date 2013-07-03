@@ -28,7 +28,7 @@ app.get('/admin', function (req, res) {
 });
 
 app.post("/admin/auth", function(req, res){
-    res.render("admin-auth.html");
+    res.render("admin-auth.html", getNextMeeting());
 });
 
 app.use(function (req, res, next) {
@@ -81,6 +81,5 @@ function getNextMeeting() {
             topicurl: speaker.link || ''
         });
     });
-    console.log(data);
     return data;
 }

@@ -5,12 +5,14 @@ html {
 
 body {
 	background: #22252a;
-	color: #fff;
+	color: #aaa;
 	font-family: "Helvetica Neue",Arial,sans-serif;
 	height: 100%;
+	margin: 0;
 	width: 100%;
 }
 
+/* Auth Styles */
 .password-section {
 	display: table;
 	height: 100%;
@@ -30,4 +32,103 @@ body {
 	font-size: 14px;
 	padding: 20px;
 	width: 300px;
+}
+
+/* Admin Screen Styles */
+.speaker-field-group > label {
+	border: 0;
+	padding: 10px 0;
+}
+
+.speaker-field-group > input {
+	border: 0;
+	padding: 10px;
+	outline-width: 0;
+}
+
+.admin-screen-header {
+	background: #565D42;
+	color: #fff;
+	padding: 20px;
+}
+
+.admin-screen-header .date {
+	font-size: 12px;
+}
+
+.admin-screen-header h1,
+.admin-screen-header h2{
+	margin: 0;
+}
+
+.new-meeting-button:hover {
+	background: #372927;
+}
+
+.new-meeting-button {
+	border: 0;
+	background: #546176;
+	color: #fff;
+	float: right;
+	font-size: 16px;
+	padding: 10px;	
+	height: 100%;
+}
+
+.new-speaker {
+	display: inline-block;
+	float: left;
+	padding: 20px;
+	width: 400px;
+}
+
+.new-speaker .speaker-field-group {
+	padding: 10px 0;
+}
+
+.new-speaker input {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+}
+
+.new-speaker input.submit {
+	border: 0;
+	background: #546176;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.new-speaker input.submit:hover {
+	background: #372927;
+}
+
+.speakers {
+	float: left;
+	padding: 20px;
+}
+
+.speakers .speaker-field-group {
+	padding: 0;
+}
+
+.speakers .speaker {
+	border-bottom: 1px solid #313B41;;
+	padding-bottom: 20px;
+}
+
+.speakers .speaker-field-group .speaker-name {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 0;
+	color: #fff;
+}
+
+.speakers .speaker-field-group > input {
+	background: transparent;
+	border: 0;
+	font-size: 14px;
+	color: #aaa;
+	width: 500px;
 }
