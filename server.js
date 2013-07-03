@@ -21,6 +21,15 @@ app.get('/', function (req, res) {
     res.render('index.html', getNextMeeting());
 });
 
+// Admin section
+app.get('/admin', function (req, res) {
+    res.render('admin.html', getNextMeeting());
+});
+
+app.post("/admin/auth", function(req, res){
+    res.render("admin-auth.html");
+});
+
 app.use(function (req, res, next) {
     res.charset = 'utf8';
     res.send(404, '<!doctype html><html lang=en><meta charset=utf-8><title>Not Found</title><style>body{background:#22252a;color:#fff;font:300 100.01% "Helvetica Neue",Helvetica,"Arial Unicode MS",Arial,sans-serif;}h1{font-weight:300;text-align:center;padding:5em;color:#ccf;}</style><body><h1>404<br>Page not found');
