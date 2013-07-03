@@ -1,6 +1,7 @@
 process.env.TZ = 'Australia/Sydney';
 
 var express = require('express');
+var fs = require('fs');
 var app = express();
 
 app.set('port', process.env.PORT || 8001);
@@ -45,8 +46,8 @@ app.listen(app.get('port'), function(){
 });
 
 function getNextMeeting() {
-    var meetings = require("./data/meetings").meetings,
-        index = meetings.length,
+    var meetings = JSON.parse(fs.readFileSync(__dirname + "/data/meetings.json")).meetings; //Need to convert this to an async call
+    var index = meetings.length,
         data, meeting,
         startTime,
         current = meetings[index - 1],
@@ -80,5 +81,6 @@ function getNextMeeting() {
             topicurl: speaker.link || ''
         });
     });
+    console.log(data);
     return data;
 }
