@@ -17,15 +17,15 @@
                 <div class="speaker-field-group"><label>Speaker Topic: </label><input type="text"></div>
                 <div class="speaker-field-group"><label>Speaker Link: </label><input type="text"></div>
                 <div class="speaker-field-group"><label>Speaker Twitter: </label><input type="text"></div>
-                <input class="submit" type="submit" value="Add Speaker">
+                <input id="add-speaker-button" class="submit" type="submit" value="Add Speaker">
             </form>
         </section>
         <section class="speakers">
                 {{#presentations}}
-            <form class="speaker">
-                <div class="speaker-field-group"><input type="text" value="{{speaker}}" class="speaker-name" disabled></div>
-                <div class="speaker-field-group"><label>Speaker Topic: </label><input type="text" value="{{topic}}" disabled></div>
-                <div class="speaker-field-group"><label>Speaker Link: </label><input type="text" value="{{speakerurl}}" disabled></div>
+            <form id="speaker-{{n}}"class="speaker">
+                <div class="speaker-field-group"><input type="text" value="{{speaker}}" class="speaker-name editable-input"></div>
+                <div class="speaker-field-group"><label>Speaker Topic: </label><input type="text" value="{{topic}}" class="editable-input"></div>
+                <div class="speaker-field-group"><label>Speaker Link: </label><input type="text" value="{{speakerurl}}" class="editable-input"></div>
             </form>
                 {{/presentations}}
         </section>

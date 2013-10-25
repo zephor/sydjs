@@ -27,7 +27,7 @@ app.get('/admin', function (req, res) {
     res.render('admin.html', getNextMeeting());
 });
 
-app.post("/admin/auth", function(req, res){
+app.post("/admin", function(req, res){
     res.render("admin-auth.html", getNextMeeting());
 });
 

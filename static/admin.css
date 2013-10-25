@@ -114,7 +114,7 @@ body {
 }
 
 .speakers .speaker {
-	border-bottom: 1px solid #313B41;;
+	border-bottom: 1px solid #313B41;
 	padding-bottom: 20px;
 }
 
@@ -131,4 +131,14 @@ body {
 	font-size: 14px;
 	color: #aaa;
 	width: 500px;
+}
+
+.speakers .speaker-field-group .editable-input:hover {
+	background: #313B41;
+	cursor: pointer;
+}
+
+.speakers .speaker-field-group .editable-input.editing {
+	background: #fff;
+	color: #000;
 }
